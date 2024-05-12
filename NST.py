@@ -180,9 +180,9 @@ def neural_style_transfer(config):
     optimizer.step(closure)
     return dump_path
 
-PATH = ''
-CONTENT_IMAGE = 'c1.jpg'
-STYLE_IMAGE = 's1.jpg'
+PATH = '/home/milan/cw_industrial/Neural-Style-Transfer'
+CONTENT_IMAGE = os.environ["CONTENT_IMAGE"]
+STYLE_IMAGE = os.environ["STYLE_IMAGE"]
 
 default_resource_dir = os.path.join(PATH, 'data')
 content_images_dir = os.path.join(default_resource_dir, 'content-images')

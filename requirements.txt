@@ -1,0 +1,5 @@
+IPython
+Pillow
+torch
+torchvision
+wandb

@@ -16,7 +16,8 @@ img_savepoint = 100
 learning_rate = 0.001
 alpha = 1
 beta = 0.01
-path="generated.png"
+path = "generated.png"
+imsize = 356
 
 run = wandb.init(
 	project = "NST1",
@@ -24,12 +25,12 @@ run = wandb.init(
 		"total_steps": 500,
 		"learning_rate": 0.001,
 		"alpha": 1,
-		"beta": 0.01
+		"beta": 0.01,
+        "imsize": 356
 	},
 )
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-imsize = 356
 
 loader = transforms.Compose(
     [

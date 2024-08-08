@@ -16,7 +16,7 @@ img_savepoint = 5
 learning_rate = 0.001
 alpha = 1
 beta = 0.01
-path="generated.png"
+path = "generated.png"
 imsize = 356
 
 run = wandb.init(

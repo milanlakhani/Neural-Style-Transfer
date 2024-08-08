@@ -68,6 +68,18 @@ model = VGG().to(device).eval()
 optimizer = optim.Adam([generated],lr = learning_rate)
 # optimizer = optim.LBFGS([content_img])
 
+def covariance_matrix(features):
+    batch_size, channel, height, width = features.size()
+    features = features.view(channel, height * width)
+    mean = features.mean(1, keepdim=True)
+    cov = (features - mean).mm((features - mean).t()) / (height * width - 1)
+    return cov
+
+def vincent_loss(generated_feature, style_feature):
+    gen_cov = covariance_matrix(generated_feature)
+    style_cov = covariance_matrix(style_feature)
+    return torch.mean((gen_cov - style_cov) ** 2)
+
 for step in range(total_steps):
     print(step)
     # Obtain the convolution features in specifically chosen layers
@@ -79,23 +91,29 @@ for step in range(total_steps):
     style_loss = content_loss = 0
 
     # iterate through all the features for the chosen layers
-    for gen_feature, orig_feature, style_features in zip(
+    for gen_feature, cont_feature, style_features in zip(
         generated_features, content_img_features, list(map(list, zip(*style_imgs_features)))
     ):
 
         # batch_size will just be 1
         batch_size, channel, height, width = gen_feature.shape
-        content_loss += torch.mean((gen_feature - orig_feature) ** 2)
-        # Compute Gram Matrix of generated
-        G = gen_feature.view(channel, height * width).mm(
-            gen_feature.view(channel, height * width).t()
-        )
-        # Compute Gram Matrix of Style
-        for style_feature in style_features:
-            A = style_feature.view(channel, height * width).mm(
-                style_feature.view(channel, height * width).t()
+        content_loss += torch.mean((gen_feature - cont_feature) ** 2)
+
+        if step % 2 == 0:
+            # Compute Gram Matrix of generated
+            G = gen_feature.view(channel, height * width).mm(
+                gen_feature.view(channel, height * width).t()
             )
-            style_loss += torch.mean((G - A) ** 2)
+            # Compute Gram Matrix of Style
+            for style_feature in style_features:
+                A = style_feature.view(channel, height * width).mm(
+                    style_feature.view(channel, height * width).t()
+                )
+                style_loss += torch.mean((G - A) ** 2)
+        else:
+            # Compute Vincent's Loss
+            for style_feature in style_features:
+                style_loss += vincent_loss(gen_feature, style_feature)
 
         style_loss = style_loss / len(style_imgs)
 

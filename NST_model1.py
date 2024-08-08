@@ -79,13 +79,13 @@ for step in range(total_steps):
     style_loss = content_loss = 0
 
     # iterate through all the features for the chosen layers
-    for gen_feature, orig_feature, style_feature in zip(
+    for gen_feature, cont_feature, style_feature in zip(
         generated_features, content_img_features, style_features
     ):
 
         # batch_size will just be 1
         batch_size, channel, height, width = gen_feature.shape
-        content_loss += torch.mean((gen_feature - orig_feature) ** 2)
+        content_loss += torch.mean((gen_feature - cont_feature) ** 2)
         # Compute Gram Matrix of generated
         G = gen_feature.view(channel, height * width).mm(
             gen_feature.view(channel, height * width).t()

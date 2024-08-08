@@ -11,8 +11,8 @@ import wandb
 wandb.login()
 
 # Hyerparameters
-total_steps = 500
-img_savepoint = 50
+total_steps = 10
+img_savepoint = 5
 learning_rate = 0.001
 alpha = 1
 beta = 0.01
@@ -21,7 +21,7 @@ path="generated.png"
 run = wandb.init(
 	project = "NST1",
 	config = {
-		"total_steps": 500,
+		"total_steps": 10,
 		"learning_rate": 0.001,
 		"alpha": 1,
 		"beta": 0.01

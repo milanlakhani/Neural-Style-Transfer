@@ -128,7 +128,7 @@ for step in range(total_steps):
         print(f"Content loss: {content_loss}")
         print(f"Total weighted loss:{total_loss}")
         wandb.log({"Style loss": style_loss, "Content loss": content_loss, "Total loss": total_loss})
-        wandb.log({"generated": [wandb.Image(generated, caption="NST image")]})
+        wandb.log({"generated": [wandb.Image(generated, caption=f"NST image, step {step}")]})
         save_image(generated, path)
 
 display(Image.open(path))

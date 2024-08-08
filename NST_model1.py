@@ -11,8 +11,8 @@ import wandb
 wandb.login()
 
 # Hyerparameters
-total_steps = 10
-img_savepoint = 5
+total_steps = 500
+img_savepoint = 100
 learning_rate = 0.001
 alpha = 1
 beta = 0.01
@@ -22,7 +22,7 @@ imsize = 356
 run = wandb.init(
 	project = "NST1",
 	config = {
-		"total_steps": 10,
+		"total_steps": 500,
 		"learning_rate": 0.001,
 		"alpha": 1,
 		"beta": 0.01,
@@ -106,7 +106,7 @@ for step in range(total_steps):
         print(f"Content loss: {content_loss}")
         print(f"Total loss:{total_loss}")
         wandb.log({"Style loss": style_loss, "Content loss": content_loss, "Total loss": total_loss})
-        wandb.log({"generated": [wandb.Image(generated, caption="NST image")]})
+        wandb.log({"generated": [wandb.Image(generated, caption=f"NST image, step {step}")]})
         save_image(generated, path)
 
 display(Image.open(path))

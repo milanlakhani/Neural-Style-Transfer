@@ -11,8 +11,8 @@ import wandb
 wandb.login()
 
 # Hyerparameters
-total_steps = 10
-img_savepoint = 5
+total_steps = 500
+img_savepoint = 100
 learning_rate = 0.001
 alpha = 1
 beta = 0.01
@@ -21,7 +21,7 @@ path="generated.png"
 run = wandb.init(
 	project = "NST1",
 	config = {
-		"total_steps": 10,
+		"total_steps": 500,
 		"learning_rate": 0.001,
 		"alpha": 1,
 		"beta": 0.01
@@ -60,26 +60,27 @@ class VGG(nn.Module):
         return features
 
 content_img = load_image('lab.jpg')
-style_img = load_image('painting.jpg')
+style_imgs = [load_image('painting.jpg'), load_image('femme-pleure.jpg')]
 
 generated = content_img.clone().requires_grad_(True)
 model = VGG().to(device).eval()
 
 optimizer = optim.Adam([generated],lr = learning_rate)
+# optimizer = optim.LBFGS([content_img])
 
 for step in range(total_steps):
     print(step)
     # Obtain the convolution features in specifically chosen layers
     generated_features = model(generated)
     content_img_features = model(content_img)
-    style_features = model(style_img)
+    style_imgs_features = [model(style_img) for style_img in style_imgs]
 
     # Loss is 0 initially
     style_loss = content_loss = 0
 
     # iterate through all the features for the chosen layers
-    for gen_feature, orig_feature, style_feature in zip(
-        generated_features, content_img_features, style_features
+    for gen_feature, orig_feature, style_features in zip(
+        generated_features, content_img_features, list(map(list, zip(*style_imgs_features)))
     ):
 
         # batch_size will just be 1
@@ -90,10 +91,13 @@ for step in range(total_steps):
             gen_feature.view(channel, height * width).t()
         )
         # Compute Gram Matrix of Style
-        A = style_feature.view(channel, height * width).mm(
-            style_feature.view(channel, height * width).t()
-        )
-        style_loss += torch.mean((G - A) ** 2)
+        for style_feature in style_features:
+            A = style_feature.view(channel, height * width).mm(
+                style_feature.view(channel, height * width).t()
+            )
+            style_loss += torch.mean((G - A) ** 2)
+
+        style_loss = style_loss / len(style_imgs)
 
     total_loss = alpha * content_loss + beta * style_loss
     optimizer.zero_grad()

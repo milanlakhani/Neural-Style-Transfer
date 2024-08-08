@@ -6,6 +6,27 @@ from IPython.display import display
 import torchvision.transforms as transforms
 import torchvision.models as models
 from torchvision.utils import save_image
+import wandb
+
+wandb.login()
+
+# Hyerparameters
+total_steps = 500
+img_savepoint = 50
+learning_rate = 0.001
+alpha = 1
+beta = 0.01
+path="generated.png"
+
+run = wandb.init(
+	project = "NST1",
+	config = {
+		"total_steps": 500,
+		"learning_rate": 0.001,
+		"alpha": 1,
+		"beta": 0.01
+	},
+)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 imsize = 356
@@ -43,14 +64,6 @@ style_img = load_image('painting.jpg')
 
 generated = content_img.clone().requires_grad_(True)
 model = VGG().to(device).eval()
-
-# Hyerparameters
-total_steps = 10
-img_savepoint = 50
-learning_rate = 0.001
-alpha = 1
-beta = 0.01
-path="generated.png"
 
 optimizer = optim.Adam([generated],lr = learning_rate)
 

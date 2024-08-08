@@ -1,0 +1,80 @@
+{
+    "os": "Linux-6.2.0-39-generic-x86_64-with-glibc2.37",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-08-08T08:05:40.502366",
+    "startedAt": "2024-08-08T08:05:37.081888",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/milan/NST/NST_model1.py",
+    "codePathLocal": "NST_model1.py",
+    "codePath": "NST_model1.py",
+    "git": {
+        "remote": null,
+        "commit": "7ffeefc0565e7020f30fdd337776d347c561d0fe"
+    },
+    "email": "milan.l@hotmail.co.uk",
+    "root": "/home/milan/NST",
+    "host": "milan-20N3S3XR00",
+    "username": "milan",
+    "executable": "/home/milan/anaconda3/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3.1183750000000003,
+        "min": 400.0,
+        "max": 4800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3.001,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.0,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.0,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.0,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.0,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.03,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.0,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.007,
+            "min": 400.0,
+            "max": 4800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 912.7941513061523,
+            "used": 167.9193458557129
+        }
+    },
+    "memory": {
+        "total": 38.79707336425781
+    }
+}

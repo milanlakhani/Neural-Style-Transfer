@@ -17,6 +17,7 @@ learning_rate = 0.001
 alpha = 1
 beta = 0.01
 path="generated.png"
+imsize = 356
 
 run = wandb.init(
 	project = "NST1",
@@ -24,12 +25,12 @@ run = wandb.init(
 		"total_steps": 10,
 		"learning_rate": 0.001,
 		"alpha": 1,
-		"beta": 0.01
+		"beta": 0.01,
+        "imsize": 356
 	},
 )
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-imsize = 356
 
 loader = transforms.Compose(
     [
@@ -42,6 +43,9 @@ def load_image(image_name):
     image = Image.open(image_name)
     image = loader(image).unsqueeze(0)
     return image.to(device)
+
+content_img = load_image('lab.jpg')
+style_img = load_image('painting.jpg')
 
 class VGG(nn.Module):
     def __init__(self):
@@ -58,9 +62,6 @@ class VGG(nn.Module):
                 features.append(x)
 
         return features
-
-content_img = load_image('lab.jpg')
-style_img = load_image('painting.jpg')
 
 generated = content_img.clone().requires_grad_(True)
 model = VGG().to(device).eval()

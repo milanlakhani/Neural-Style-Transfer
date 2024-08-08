@@ -101,7 +101,9 @@ for step in range(total_steps):
     optimizer.step()
 
     if step % img_savepoint == 0:
-        print(total_loss)
+        print(f"Style loss: {style_loss}")
+        print(f"Content loss: {content_loss}")
+        print(f"Total loss:{total_loss}")
         save_image(generated, path)
 
 display(Image.open(path))

@@ -14,8 +14,8 @@ wandb.login()
 total_steps = 500
 img_savepoint = 100
 learning_rate = 0.001
-alpha = 1
-beta = 0.01
+content_weight = 1
+style_weight = 0.01
 path = "generated.png"
 imsize = 356
 
@@ -24,8 +24,8 @@ run = wandb.init(
 	config = {
 		"total_steps": 500,
 		"learning_rate": 0.001,
-		"alpha": 1,
-		"beta": 0.01,
+		"content_weight": 1,
+		"style_weight": 0.01,
         "imsize": 356
 	},
 )
@@ -96,7 +96,7 @@ for step in range(total_steps):
         )
         style_loss += torch.mean((G - A) ** 2)
 
-    total_loss = alpha * content_loss + beta * style_loss
+    total_loss = content_weight * content_loss + style_weight * style_loss
     optimizer.zero_grad()
     total_loss.backward()
     optimizer.step()

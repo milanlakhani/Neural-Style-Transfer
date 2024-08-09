@@ -122,7 +122,7 @@ for step in range(total_steps):
             for style_feature in style_features:
                 style_loss += vincent_loss(gen_feature, style_feature)
 
-        style_loss = style_loss / len(style_imgs)
+    style_loss = style_loss / len(style_imgs)
 
     total_loss = content_weight * content_loss + style_weight * style_loss
     optimizer.zero_grad()
@@ -136,7 +136,7 @@ for step in range(total_steps):
         wandb.log({"Style loss": style_loss, "Content loss": content_loss, "Total loss": total_loss})
         wandb.log({"generated": [wandb.Image(generated, caption=f"NST image, step {step}")]})
         save_image(generated, path)
-        save_checkpoint(step, "vgg-19", optimizer)
+        save_checkpoint(step, "vgg-19-2", optimizer)
 
 display(Image.open(path))
 

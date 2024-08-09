@@ -30,6 +30,10 @@ run = wandb.init(
 	},
 )
 
+def save_checkpoint(step, model_name, optimizer):
+    ckpt = {'step': step, 'optimizer_state': optimizer.state_dict()}
+    torch.save(ckpt, f"{model_name}_ckpt_{str(step)}.pth")
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 loader = transforms.Compose(
@@ -108,6 +112,7 @@ for step in range(total_steps):
         wandb.log({"Style loss": style_loss, "Content loss": content_loss, "Total loss": total_loss})
         wandb.log({"generated": [wandb.Image(generated, caption=f"NST image, step {step}")]})
         save_image(generated, path)
+        save_checkpoint(step, "vgg-19-1", optimizer)
 
 display(Image.open(path))
 

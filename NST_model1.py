@@ -11,7 +11,7 @@ import wandb
 wandb.login()
 
 # Hyerparameters
-total_steps = 500
+total_steps = 1000
 img_savepoint = 100
 learning_rate = 0.001
 content_weight = 1
@@ -25,7 +25,7 @@ run = wandb.init(
 		"total_steps": 500,
 		"learning_rate": 0.001,
 		"content_weight": 1,
-		"style_weight": 0.01,
+		"style_weight": 0.1,
         "imsize": 356
 	},
 )
@@ -49,7 +49,7 @@ def load_image(image_name):
     return image.to(device)
 
 content_img = load_image('lab.jpg')
-style_img = load_image('painting.jpg')
+style_img = load_image('dali.jpg')
 
 class VGG(nn.Module):
     def __init__(self):

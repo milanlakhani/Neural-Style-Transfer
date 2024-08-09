@@ -1,0 +1,6 @@
+
+0
+Traceback (most recent call last):
+  File "/home/milan/Neural-Style-Transfer/NST_model2.py", line 128, in <module>
+    generated.requires_grad(True)
+TypeError: 'bool' object is not callable

@@ -1,0 +1,27 @@
+
+0
+Traceback (most recent call last):
+  File "/home/milan/Neural-Style-Transfer/NST_model2.py", line 203, in <module>
+    optimizer.step(closure)
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/optim/optimizer.py", line 484, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/optim/lbfgs.py", line 323, in step
+    orig_loss = closure()
+                ^^^^^^^^^
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/milan/Neural-Style-Transfer/NST_model2.py", line 148, in closure
+    loss.backward()
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/autograd/graph.py", line 768, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Trying to backward through the graph a second time (or directly access saved tensors after they have already been freed). Saved intermediate values of the graph are freed when you call .backward() or autograd.grad(). Specify retain_graph=True if you need to backward through the graph a second time or if you need to access saved tensors after calling backward.

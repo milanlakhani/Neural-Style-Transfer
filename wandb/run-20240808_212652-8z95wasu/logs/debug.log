@@ -1,0 +1,29 @@
+2024-08-08 21:26:52,110 INFO    MainThread:39766 [wandb_setup.py:_flush():76] Current SDK version is 0.17.0
+2024-08-08 21:26:52,111 INFO    MainThread:39766 [wandb_setup.py:_flush():76] Configure stats pid to 39766
+2024-08-08 21:26:52,111 INFO    MainThread:39766 [wandb_setup.py:_flush():76] Loading settings from /home/milan/.config/wandb/settings
+2024-08-08 21:26:52,111 INFO    MainThread:39766 [wandb_setup.py:_flush():76] Loading settings from /home/milan/Neural-Style-Transfer/wandb/settings
+2024-08-08 21:26:52,111 INFO    MainThread:39766 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-08-08 21:26:52,111 INFO    MainThread:39766 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'NST_model1.py', 'program_abspath': '/home/milan/Neural-Style-Transfer/NST_model1.py', 'program': '/home/milan/Neural-Style-Transfer/NST_model1.py'}
+2024-08-08 21:26:52,111 INFO    MainThread:39766 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-08 21:26:52,111 INFO    MainThread:39766 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-08-08 21:26:52,111 INFO    MainThread:39766 [wandb_init.py:_log_setup():520] Logging user logs to /home/milan/Neural-Style-Transfer/wandb/run-20240808_212652-8z95wasu/logs/debug.log
+2024-08-08 21:26:52,111 INFO    MainThread:39766 [wandb_init.py:_log_setup():521] Logging internal logs to /home/milan/Neural-Style-Transfer/wandb/run-20240808_212652-8z95wasu/logs/debug-internal.log
+2024-08-08 21:26:52,112 INFO    MainThread:39766 [wandb_init.py:init():560] calling init triggers
+2024-08-08 21:26:52,112 INFO    MainThread:39766 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'total_steps': 10, 'learning_rate': 0.001, 'alpha': 1, 'beta': 0.01}
+2024-08-08 21:26:52,112 INFO    MainThread:39766 [wandb_init.py:init():610] starting backend
+2024-08-08 21:26:52,112 INFO    MainThread:39766 [wandb_init.py:init():614] setting up manager
+2024-08-08 21:26:52,114 INFO    MainThread:39766 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-08-08 21:26:52,117 INFO    MainThread:39766 [wandb_init.py:init():622] backend started and connected
+2024-08-08 21:26:52,121 INFO    MainThread:39766 [wandb_init.py:init():711] updated telemetry
+2024-08-08 21:26:52,130 INFO    MainThread:39766 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-08-08 21:26:52,630 INFO    MainThread:39766 [wandb_run.py:_on_init():2396] communicating current version
+2024-08-08 21:26:52,732 INFO    MainThread:39766 [wandb_run.py:_on_init():2405] got version response upgrade_message: "wandb version 0.17.6 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-08-08 21:26:52,733 INFO    MainThread:39766 [wandb_init.py:init():795] starting run threads in backend
+2024-08-08 21:27:08,457 INFO    MainThread:39766 [wandb_run.py:_console_start():2374] atexit reg
+2024-08-08 21:27:08,457 INFO    MainThread:39766 [wandb_run.py:_redirect():2229] redirect: wrap_raw
+2024-08-08 21:27:08,458 INFO    MainThread:39766 [wandb_run.py:_redirect():2294] Wrapping output streams.
+2024-08-08 21:27:08,458 INFO    MainThread:39766 [wandb_run.py:_redirect():2319] Redirects installed.
+2024-08-08 21:27:08,460 INFO    MainThread:39766 [wandb_init.py:init():838] run started, returning control to user process
+2024-08-08 21:27:34,795 WARNING MsgRouterThr:39766 [router.py:message_loop():77] message_loop has been closed

@@ -1,0 +1,80 @@
+{
+    "os": "Linux-6.2.0-39-generic-x86_64-with-glibc2.37",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-08-08T20:17:27.189035",
+    "startedAt": "2024-08-08T20:17:17.761024",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/milan/Neural-Style-Transfer/NST_model1.py",
+    "codePathLocal": "NST_model1.py",
+    "codePath": "NST_model1.py",
+    "git": {
+        "remote": "git@github.com:milanlakhani/Neural-Style-Transfer.git",
+        "commit": "61c3b25e66bddbfa94416af4eb02fec58a034a7c"
+    },
+    "email": "milan.l@hotmail.co.uk",
+    "root": "/home/milan/Neural-Style-Transfer",
+    "host": "milan-20N3S3XR00",
+    "username": "milan",
+    "executable": "/home/milan/Neural-Style-Transfer/nstmil/bin/python3",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 800.047375,
+        "min": 400.0,
+        "max": 4800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 799.809,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.032,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.023,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.088,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.383,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 799.998,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 799.978,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 800.045,
+            "min": 400.0,
+            "max": 4800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 912.7941513061523,
+            "used": 169.5672950744629
+        }
+    },
+    "memory": {
+        "total": 38.79707336425781
+    }
+}

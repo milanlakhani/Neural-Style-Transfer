@@ -1,0 +1,21 @@
+
+0
+Traceback (most recent call last):
+  File "/home/milan/Neural-Style-Transfer/NST_model2.py", line 203, in <module>
+    optimizer.step(closure)
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/optim/optimizer.py", line 484, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/optim/lbfgs.py", line 323, in step
+    orig_loss = closure()
+                ^^^^^^^^^
+  File "/home/milan/Neural-Style-Transfer/nstmil/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/milan/Neural-Style-Transfer/NST_model2.py", line 167, in closure
+    input_img = input_img.clamp(0, 1)  # Out-of-place operation
+                ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'input_img' where it is not associated with a value

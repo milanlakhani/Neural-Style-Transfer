@@ -1,0 +1,12 @@
+
+0
+Traceback (most recent call last):
+  File "/home/milan/Neural-Style-Transfer/NST_model2.py", line 125, in <module>
+    optimizer.step()
+  File "/home/milan/anaconda3/lib/python3.11/site-packages/torch/optim/optimizer.py", line 373, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/milan/anaconda3/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: LBFGS.step() missing 1 required positional argument: 'closure'

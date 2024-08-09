@@ -1,0 +1,80 @@
+{
+    "os": "Linux-6.2.0-39-generic-x86_64-with-glibc2.37",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-08-08T20:26:43.938222",
+    "startedAt": "2024-08-08T20:26:40.494383",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/milan/Neural-Style-Transfer/NST_model1.py",
+    "codePathLocal": "NST_model1.py",
+    "codePath": "NST_model1.py",
+    "git": {
+        "remote": "git@github.com:milanlakhani/Neural-Style-Transfer.git",
+        "commit": "07e261ac33c0351f70b038eaa2b0fbb2d2968afd"
+    },
+    "email": "milan.l@hotmail.co.uk",
+    "root": "/home/milan/Neural-Style-Transfer",
+    "host": "milan-20N3S3XR00",
+    "username": "milan",
+    "executable": "/home/milan/anaconda3/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2.505875,
+        "min": 400.0,
+        "max": 4800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2.158,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.165,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.131,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.165,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.165,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.168,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.165,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 2.148,
+            "min": 400.0,
+            "max": 4800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 912.7941513061523,
+            "used": 169.57089614868164
+        }
+    },
+    "memory": {
+        "total": 38.79707336425781
+    }
+}

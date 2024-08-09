@@ -1,0 +1,1 @@
+{"Style loss": 1127130240.0, "Content loss": 42.518131256103516, "Total loss": 11271345.0, "_timestamp": 1723204480.5074754, "_runtime": 779.1655783653259, "_step": 3, "generated": {"_type": "images/separated", "width": 356, "height": 356, "format": "png", "count": 1, "filenames": ["media/images/generated_3_4ec2e3201865e5902c1c.png"], "captions": ["NST image, step 100"]}}

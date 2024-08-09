@@ -1,0 +1,202 @@
+2024-08-08 22:48:26,597 INFO    StreamThr :41866 [internal.py:wandb_internal():85] W&B internal server running at pid: 41866, started at: 2024-08-08 22:48:26.595813
+2024-08-08 22:48:26,600 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: status
+2024-08-08 22:48:26,604 INFO    WriterThread:41866 [datastore.py:open_for_write():87] open: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/run-mmzjk8ke.wandb
+2024-08-08 22:48:26,604 DEBUG   SenderThread:41866 [sender.py:send():391] send: header
+2024-08-08 22:48:26,607 DEBUG   SenderThread:41866 [sender.py:send():391] send: run
+2024-08-08 22:48:31,609 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: keepalive
+2024-08-08 22:48:32,020 INFO    SenderThread:41866 [dir_watcher.py:__init__():211] watching files in: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files
+2024-08-08 22:48:32,021 INFO    SenderThread:41866 [sender.py:_start_run_threads():1200] run started: mmzjk8ke with start time 1723153706.595877
+2024-08-08 22:48:32,021 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: status_report
+2024-08-08 22:48:32,034 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: check_version
+2024-08-08 22:48:32,035 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: check_version
+2024-08-08 22:48:37,036 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: keepalive
+2024-08-08 22:48:37,037 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: status_report
+2024-08-08 22:48:37,092 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: run_start
+2024-08-08 22:48:40,009 ERROR   HandlerThread:41866 [gpu.py:is_available():381] Error initializing NVML: Driver Not Loaded
+2024-08-08 22:48:40,011 DEBUG   HandlerThread:41866 [system_info.py:__init__():26] System info init
+2024-08-08 22:48:40,011 DEBUG   HandlerThread:41866 [system_info.py:__init__():41] System info init done
+2024-08-08 22:48:40,011 INFO    HandlerThread:41866 [system_monitor.py:start():194] Starting system monitor
+2024-08-08 22:48:40,011 INFO    SystemMonitor:41866 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-08-08 22:48:40,012 INFO    HandlerThread:41866 [system_monitor.py:probe():214] Collecting system info
+2024-08-08 22:48:40,012 INFO    SystemMonitor:41866 [interfaces.py:start():188] Started cpu monitoring
+2024-08-08 22:48:40,014 INFO    SystemMonitor:41866 [interfaces.py:start():188] Started disk monitoring
+2024-08-08 22:48:40,015 INFO    SystemMonitor:41866 [interfaces.py:start():188] Started memory monitoring
+2024-08-08 22:48:40,016 INFO    SystemMonitor:41866 [interfaces.py:start():188] Started network monitoring
+2024-08-08 22:48:40,025 DEBUG   HandlerThread:41866 [system_info.py:probe():152] Probing system
+2024-08-08 22:48:40,026 DEBUG   HandlerThread:41866 [system_info.py:_probe_git():137] Probing git
+2024-08-08 22:48:40,032 DEBUG   HandlerThread:41866 [system_info.py:_probe_git():145] Probing git done
+2024-08-08 22:48:40,032 DEBUG   HandlerThread:41866 [system_info.py:probe():200] Probing system done
+2024-08-08 22:48:40,032 DEBUG   HandlerThread:41866 [system_monitor.py:probe():223] {'os': 'Linux-6.2.0-39-generic-x86_64-with-glibc2.37', 'python': '3.11.4', 'heartbeatAt': '2024-08-08T21:48:40.025086', 'startedAt': '2024-08-08T21:48:26.585187', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/milan/Neural-Style-Transfer/NST_model2.py', 'codePathLocal': 'NST_model2.py', 'codePath': 'NST_model2.py', 'git': {'remote': 'git@github.com:milanlakhani/Neural-Style-Transfer.git', 'commit': 'dd61d9116c635021750d165088940fefd58fc90a'}, 'email': 'milan.l@hotmail.co.uk', 'root': '/home/milan/Neural-Style-Transfer', 'host': 'milan-20N3S3XR00', 'username': 'milan', 'executable': '/home/milan/Neural-Style-Transfer/venv/bin/python3', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 1669.7266249999998, 'min': 400.0, 'max': 4800.0}, 'cpu_freq_per_core': [{'current': 1999.999, 'min': 400.0, 'max': 4800.0}, {'current': 2000.244, 'min': 400.0, 'max': 4800.0}, {'current': 2000.158, 'min': 400.0, 'max': 4800.0}, {'current': 1999.987, 'min': 400.0, 'max': 4800.0}, {'current': 1999.458, 'min': 400.0, 'max': 4800.0}, {'current': 2000.0, 'min': 400.0, 'max': 4800.0}, {'current': 2000.843, 'min': 400.0, 'max': 4800.0}, {'current': 1999.95, 'min': 400.0, 'max': 4800.0}], 'disk': {'/': {'total': 912.7941513061523, 'used': 174.95122146606445}}, 'memory': {'total': 38.79707336425781}}
+2024-08-08 22:48:40,032 INFO    HandlerThread:41866 [system_monitor.py:probe():224] Finished collecting system info
+2024-08-08 22:48:40,032 INFO    HandlerThread:41866 [system_monitor.py:probe():227] Publishing system info
+2024-08-08 22:48:40,033 INFO    HandlerThread:41866 [system_monitor.py:probe():229] Finished publishing system info
+2024-08-08 22:48:40,035 DEBUG   SenderThread:41866 [sender.py:send():391] send: files
+2024-08-08 22:48:40,035 INFO    SenderThread:41866 [sender.py:_save_file():1466] saving file wandb-metadata.json with policy now
+2024-08-08 22:48:40,077 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: python_packages
+2024-08-08 22:48:40,077 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: python_packages
+2024-08-08 22:48:40,077 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:40,078 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: stop_status
+2024-08-08 22:48:40,078 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: stop_status
+2024-08-08 22:48:40,412 DEBUG   SenderThread:41866 [sender.py:send():391] send: telemetry
+2024-08-08 22:48:40,694 INFO    wandb-upload_0:41866 [upload_job.py:push():130] Uploaded file /tmp/tmpfwe8cho3wandb/58k75jhe-wandb-metadata.json
+2024-08-08 22:48:41,025 INFO    Thread-12 :41866 [dir_watcher.py:_on_file_created():271] file/dir created: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/requirements.txt
+2024-08-08 22:48:41,025 INFO    Thread-12 :41866 [dir_watcher.py:_on_file_created():271] file/dir created: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/wandb-metadata.json
+2024-08-08 22:48:41,078 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:42,025 INFO    Thread-12 :41866 [dir_watcher.py:_on_file_created():271] file/dir created: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/output.log
+2024-08-08 22:48:42,078 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:42,883 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: status_report
+2024-08-08 22:48:43,078 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:44,026 INFO    Thread-12 :41866 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/output.log
+2024-08-08 22:48:44,078 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:45,078 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:46,078 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:47,078 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:48,078 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: status_report
+2024-08-08 22:48:48,079 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:48,229 DEBUG   SenderThread:41866 [sender.py:send():391] send: exit
+2024-08-08 22:48:48,229 INFO    SenderThread:41866 [sender.py:send_exit():598] handling exit code: 1
+2024-08-08 22:48:48,229 INFO    SenderThread:41866 [sender.py:send_exit():600] handling runtime: 11
+2024-08-08 22:48:48,230 INFO    SenderThread:41866 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-08 22:48:48,230 INFO    SenderThread:41866 [sender.py:send_exit():606] send defer
+2024-08-08 22:48:48,230 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:48,230 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 0
+2024-08-08 22:48:48,230 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:48,231 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 0
+2024-08-08 22:48:48,231 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 1
+2024-08-08 22:48:48,231 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:48,231 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 1
+2024-08-08 22:48:48,231 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:48,231 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 1
+2024-08-08 22:48:48,231 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 2
+2024-08-08 22:48:48,231 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:48,231 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 2
+2024-08-08 22:48:48,231 INFO    HandlerThread:41866 [system_monitor.py:finish():203] Stopping system monitor
+2024-08-08 22:48:48,231 DEBUG   SystemMonitor:41866 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-08-08 22:48:48,231 DEBUG   SystemMonitor:41866 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-08-08 22:48:48,231 DEBUG   SystemMonitor:41866 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-08-08 22:48:48,232 INFO    HandlerThread:41866 [interfaces.py:finish():200] Joined cpu monitor
+2024-08-08 22:48:48,232 INFO    HandlerThread:41866 [interfaces.py:finish():200] Joined disk monitor
+2024-08-08 22:48:48,232 INFO    HandlerThread:41866 [interfaces.py:finish():200] Joined memory monitor
+2024-08-08 22:48:48,232 INFO    HandlerThread:41866 [interfaces.py:finish():200] Joined network monitor
+2024-08-08 22:48:48,232 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:48,232 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 2
+2024-08-08 22:48:48,232 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 3
+2024-08-08 22:48:48,232 DEBUG   SenderThread:41866 [sender.py:send():391] send: stats
+2024-08-08 22:48:48,233 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:48,233 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 3
+2024-08-08 22:48:48,233 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:48,233 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 3
+2024-08-08 22:48:48,233 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 4
+2024-08-08 22:48:48,233 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:48,233 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 4
+2024-08-08 22:48:48,233 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:48,233 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 4
+2024-08-08 22:48:48,233 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 5
+2024-08-08 22:48:48,233 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:48,233 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 5
+2024-08-08 22:48:48,234 DEBUG   SenderThread:41866 [sender.py:send():391] send: summary
+2024-08-08 22:48:48,234 INFO    SenderThread:41866 [sender.py:_save_file():1466] saving file wandb-summary.json with policy end
+2024-08-08 22:48:48,234 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:48,234 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 5
+2024-08-08 22:48:48,234 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 6
+2024-08-08 22:48:48,234 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:48,234 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 6
+2024-08-08 22:48:48,234 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:48,234 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 6
+2024-08-08 22:48:48,237 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: status_report
+2024-08-08 22:48:48,602 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 7
+2024-08-08 22:48:48,603 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:48,603 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 7
+2024-08-08 22:48:48,604 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:48,604 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 7
+2024-08-08 22:48:49,028 INFO    Thread-12 :41866 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/config.yaml
+2024-08-08 22:48:49,029 INFO    Thread-12 :41866 [dir_watcher.py:_on_file_created():271] file/dir created: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/wandb-summary.json
+2024-08-08 22:48:49,228 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 22:48:50,214 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 8
+2024-08-08 22:48:50,214 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: poll_exit
+2024-08-08 22:48:50,215 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:50,215 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 8
+2024-08-08 22:48:50,216 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:50,216 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 8
+2024-08-08 22:48:50,217 INFO    SenderThread:41866 [job_builder.py:build():440] Attempting to build job artifact
+2024-08-08 22:48:50,217 INFO    SenderThread:41866 [job_builder.py:_get_source_type():569] is repo sourced job
+2024-08-08 22:48:50,230 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 22:48:50,256 INFO    SenderThread:41866 [job_builder.py:build():545] adding wandb-job metadata file
+2024-08-08 22:48:50,261 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 9
+2024-08-08 22:48:50,261 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: poll_exit
+2024-08-08 22:48:50,262 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:50,262 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 9
+2024-08-08 22:48:50,262 DEBUG   SenderThread:41866 [sender.py:send():391] send: artifact
+2024-08-08 22:48:51,029 INFO    Thread-12 :41866 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/output.log
+2024-08-08 22:48:51,231 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 22:48:52,347 INFO    wandb-upload_0:41866 [upload_job.py:push():88] Uploaded file /home/milan/.local/share/wandb/artifacts/staging/tmpv3i65osr
+2024-08-08 22:48:52,982 INFO    wandb-upload_1:41866 [upload_job.py:push():88] Uploaded file /tmp/tmpv0_i2m3q/wandb-job.json
+2024-08-08 22:48:54,793 INFO    SenderThread:41866 [sender.py:send_artifact():1549] sent artifact job-git_github.com_milanlakhani_Neural-Style-Transfer.git_NST_model2.py - {'id': 'QXJ0aWZhY3Q6MTEyMTI1NDUzNA==', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjM5MDgyOTkzNA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTEyMDc3NDUwNQ==', 'versionIndex': 1}}}
+2024-08-08 22:48:54,793 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:54,793 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 9
+2024-08-08 22:48:54,794 INFO    SenderThread:41866 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-08-08 22:48:54,794 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: status_report
+2024-08-08 22:48:55,033 INFO    SenderThread:41866 [dir_watcher.py:finish():388] scan: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files
+2024-08-08 22:48:55,033 INFO    SenderThread:41866 [dir_watcher.py:finish():402] scan save: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/output.log output.log
+2024-08-08 22:48:55,034 INFO    SenderThread:41866 [dir_watcher.py:finish():402] scan save: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/requirements.txt requirements.txt
+2024-08-08 22:48:55,040 INFO    SenderThread:41866 [dir_watcher.py:finish():402] scan save: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/config.yaml config.yaml
+2024-08-08 22:48:55,046 INFO    SenderThread:41866 [dir_watcher.py:finish():402] scan save: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/wandb-summary.json wandb-summary.json
+2024-08-08 22:48:55,047 INFO    SenderThread:41866 [dir_watcher.py:finish():402] scan save: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/wandb-metadata.json wandb-metadata.json
+2024-08-08 22:48:55,047 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 10
+2024-08-08 22:48:55,047 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: poll_exit
+2024-08-08 22:48:55,048 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:55,049 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 10
+2024-08-08 22:48:55,055 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:55,056 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 10
+2024-08-08 22:48:55,056 INFO    SenderThread:41866 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-08 22:48:55,236 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 22:48:55,237 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: poll_exit
+2024-08-08 22:48:55,468 INFO    wandb-upload_0:41866 [upload_job.py:push():130] Uploaded file /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/output.log
+2024-08-08 22:48:55,746 INFO    wandb-upload_3:41866 [upload_job.py:push():130] Uploaded file /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/wandb-summary.json
+2024-08-08 22:48:55,748 INFO    wandb-upload_1:41866 [upload_job.py:push():130] Uploaded file /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/requirements.txt
+2024-08-08 22:48:56,055 INFO    wandb-upload_2:41866 [upload_job.py:push():130] Uploaded file /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/files/config.yaml
+2024-08-08 22:48:56,239 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 22:48:56,240 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: poll_exit
+2024-08-08 22:48:56,256 INFO    Thread-11 (_thread_body):41866 [sender.py:transition_state():626] send defer: 11
+2024-08-08 22:48:56,257 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:56,258 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 11
+2024-08-08 22:48:56,259 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:56,259 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 11
+2024-08-08 22:48:56,259 INFO    SenderThread:41866 [file_pusher.py:join():175] waiting for file pusher
+2024-08-08 22:48:56,260 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 12
+2024-08-08 22:48:56,261 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:56,261 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 12
+2024-08-08 22:48:56,262 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:56,262 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 12
+2024-08-08 22:48:56,262 INFO    SenderThread:41866 [file_stream.py:finish():601] file stream finish called
+2024-08-08 22:48:56,512 INFO    SenderThread:41866 [file_stream.py:finish():605] file stream finish is done
+2024-08-08 22:48:56,512 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 13
+2024-08-08 22:48:56,513 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:56,513 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 13
+2024-08-08 22:48:56,514 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:56,514 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 13
+2024-08-08 22:48:56,514 INFO    SenderThread:41866 [sender.py:transition_state():626] send defer: 14
+2024-08-08 22:48:56,515 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: defer
+2024-08-08 22:48:56,515 INFO    HandlerThread:41866 [handler.py:handle_request_defer():184] handle defer: 14
+2024-08-08 22:48:56,516 DEBUG   SenderThread:41866 [sender.py:send():391] send: final
+2024-08-08 22:48:56,517 DEBUG   SenderThread:41866 [sender.py:send():391] send: footer
+2024-08-08 22:48:56,517 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: defer
+2024-08-08 22:48:56,517 INFO    SenderThread:41866 [sender.py:send_request_defer():622] handle sender defer: 14
+2024-08-08 22:48:56,519 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 22:48:56,521 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: poll_exit
+2024-08-08 22:48:56,522 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: server_info
+2024-08-08 22:48:56,523 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: poll_exit
+2024-08-08 22:48:56,523 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: get_summary
+2024-08-08 22:48:56,523 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: sampled_history
+2024-08-08 22:48:56,524 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: internal_messages
+2024-08-08 22:48:56,526 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: server_info
+2024-08-08 22:48:57,078 DEBUG   SenderThread:41866 [sender.py:send_request():418] send_request: poll_exit
+2024-08-08 22:48:57,080 INFO    MainThread:41866 [wandb_run.py:_footer_history_summary_info():4035] rendering history
+2024-08-08 22:48:57,080 INFO    MainThread:41866 [wandb_run.py:_footer_history_summary_info():4067] rendering summary
+2024-08-08 22:48:57,080 INFO    MainThread:41866 [wandb_run.py:_footer_sync_info():3994] logging synced files
+2024-08-08 22:48:57,082 DEBUG   HandlerThread:41866 [handler.py:handle_request():158] handle_request: shutdown
+2024-08-08 22:48:57,082 INFO    HandlerThread:41866 [handler.py:finish():882] shutting down handler
+2024-08-08 22:48:57,526 INFO    WriterThread:41866 [datastore.py:close():296] close: /home/milan/Neural-Style-Transfer/wandb/run-20240808_224826-mmzjk8ke/run-mmzjk8ke.wandb
+2024-08-08 22:48:58,079 INFO    SenderThread:41866 [sender.py:finish():1631] shutting down sender
+2024-08-08 22:48:58,080 INFO    SenderThread:41866 [file_pusher.py:finish():169] shutting down file pusher
+2024-08-08 22:48:58,080 INFO    SenderThread:41866 [file_pusher.py:join():175] waiting for file pusher

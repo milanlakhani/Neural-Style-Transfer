@@ -1,0 +1,80 @@
+{
+    "os": "Linux-6.2.0-39-generic-x86_64-with-glibc2.37",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-08-09T08:51:06.319616",
+    "startedAt": "2024-08-09T08:51:02.546519",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/milan/Neural-Style-Transfer/NST_model2.py",
+    "codePathLocal": "NST_model2.py",
+    "codePath": "NST_model2.py",
+    "git": {
+        "remote": "git@github.com:milanlakhani/Neural-Style-Transfer.git",
+        "commit": "57ea9c191f0aef20d95f32188b09e00219e6dcf0"
+    },
+    "email": "milan.l@hotmail.co.uk",
+    "root": "/home/milan/Neural-Style-Transfer",
+    "host": "milan-20N3S3XR00",
+    "username": "milan",
+    "executable": "/home/milan/Neural-Style-Transfer/nstmil/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3596.87475,
+        "min": 400.0,
+        "max": 4800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3400.009,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3400.01,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3399.999,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3400.005,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3400.065,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3400.003,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3400.035,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3399.986,
+            "min": 400.0,
+            "max": 4800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 912.7941513061523,
+            "used": 174.99862670898438
+        }
+    },
+    "memory": {
+        "total": 38.79707336425781
+    }
+}

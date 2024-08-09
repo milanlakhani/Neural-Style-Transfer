@@ -1,0 +1,118 @@
+
+0
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+Style loss: 64478232.0
+Content loss: 0.0
+Total loss:644782.3125
+1
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+2
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+3
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+4
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+5
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+Style loss: 56354688.0
+Content loss: 2.240304708480835
+Total loss:563549.125
+6
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+7
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+8
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+9
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<class 'torch.Tensor'>
+<PIL.PngImagePlugin.PngImageFile image mode=RGB size=356x356 at 0x7F91F184DC50>

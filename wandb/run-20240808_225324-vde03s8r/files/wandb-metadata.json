@@ -1,0 +1,80 @@
+{
+    "os": "Linux-6.2.0-39-generic-x86_64-with-glibc2.37",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-08-08T21:53:33.807562",
+    "startedAt": "2024-08-08T21:53:24.837615",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/milan/Neural-Style-Transfer/NST_model2.py",
+    "codePathLocal": "NST_model2.py",
+    "codePath": "NST_model2.py",
+    "git": {
+        "remote": "git@github.com:milanlakhani/Neural-Style-Transfer.git",
+        "commit": "dd61d9116c635021750d165088940fefd58fc90a"
+    },
+    "email": "milan.l@hotmail.co.uk",
+    "root": "/home/milan/Neural-Style-Transfer",
+    "host": "milan-20N3S3XR00",
+    "username": "milan",
+    "executable": "/home/milan/Neural-Style-Transfer/venv/bin/python3",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3347.0388749999993,
+        "min": 400.0,
+        "max": 4800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3462.142,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3343.523,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3313.253,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3321.686,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3291.098,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3383.745,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3315.605,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3345.259,
+            "min": 400.0,
+            "max": 4800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 912.7941513061523,
+            "used": 174.95362091064453
+        }
+    },
+    "memory": {
+        "total": 38.79707336425781
+    }
+}

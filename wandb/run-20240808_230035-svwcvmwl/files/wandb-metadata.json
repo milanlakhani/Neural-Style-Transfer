@@ -1,0 +1,80 @@
+{
+    "os": "Linux-6.2.0-39-generic-x86_64-with-glibc2.37",
+    "python": "3.11.4",
+    "heartbeatAt": "2024-08-08T22:00:44.460287",
+    "startedAt": "2024-08-08T22:00:35.278649",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/milan/Neural-Style-Transfer/NST_model2.py",
+    "codePathLocal": "NST_model2.py",
+    "codePath": "NST_model2.py",
+    "git": {
+        "remote": "git@github.com:milanlakhani/Neural-Style-Transfer.git",
+        "commit": "e85a68df2d5c93b469a6739b2a3f7f99a5e5e7e7"
+    },
+    "email": "milan.l@hotmail.co.uk",
+    "root": "/home/milan/Neural-Style-Transfer",
+    "host": "milan-20N3S3XR00",
+    "username": "milan",
+    "executable": "/home/milan/Neural-Style-Transfer/venv/bin/python3",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1200.0787500000001,
+        "min": 400.0,
+        "max": 4800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1200.075,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1200.052,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1199.87,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1200.007,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1200.003,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1200.311,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1397.136,
+            "min": 400.0,
+            "max": 4800.0
+        },
+        {
+            "current": 1250.588,
+            "min": 400.0,
+            "max": 4800.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 912.7941513061523,
+            "used": 174.9580078125
+        }
+    },
+    "memory": {
+        "total": 38.79707336425781
+    }
+}

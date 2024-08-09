@@ -15,7 +15,7 @@ total_steps = 500
 img_savepoint = 100
 learning_rate = 0.001
 content_weight = 1
-style_weight = 0.01
+style_weight = 0.1
 path = "generated.png"
 imsize = 356
 

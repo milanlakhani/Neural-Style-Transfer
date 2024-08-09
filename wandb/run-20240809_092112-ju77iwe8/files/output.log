@@ -1,0 +1,7 @@
+
+0
+Traceback (most recent call last):
+  File "/home/milan/Neural-Style-Transfer/NST_model2.py", line 131, in <module>
+    optimizer = self.get_input_optimizer(generated)
+                ^^^^
+NameError: name 'self' is not defined

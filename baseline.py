@@ -32,9 +32,16 @@ run = wandb.init(
 
 def save_checkpoint(step, model_name, optimizer):
     ckpt = {'step': step, 'optimizer_state': optimizer.state_dict()}
-    torch.save(ckpt, f"{model_name}_ckpt_{str(step)}.pth")
+    torch.save(ckpt, f"checkpoints/{model_name}_ckpt_step_{str(step)}.pth")
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+def load_checkpoint(file_name, optimizer, device=None):
+    if not device:
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    ckpt = torch.load(file_name, map_location=device)
+    optimizer.load_state_dict(ckpt['optimizer_state'])
+    print("Optimizer's state loaded!")
 
 loader = transforms.Compose(
     [

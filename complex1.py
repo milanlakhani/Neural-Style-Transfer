@@ -139,7 +139,7 @@ for step in range(total_steps):
     total_loss.backward()
     optimizer.step()
 
-    if step % img_savepoint == 0:
+    if step + 1 % img_savepoint == 0:
         print(f"Style loss: {style_loss}")
         print(f"Content loss: {content_loss}")
         print(f"Total weighted loss:{total_loss}")

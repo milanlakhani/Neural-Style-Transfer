@@ -12,7 +12,7 @@ import yaml
 
 import vgg
 
-WANDB_API_KEY = "b186ee755221be26fc029882e476e6caf180357d"
+WANDB_API_KEY = None
 
 if WANDB_API_KEY:
     wandb.login(key=WANDB_API_KEY)
@@ -105,12 +105,10 @@ for step in range(total_steps):
     print(step)
     def closure():
         optimizer.zero_grad()
-        # Obtain the convolution features in specifically chosen layers
         generated_features = model(generated)
         content_img_features = model(content_img)
         style_imgs_features = [model(style_img) for style_img in style_imgs]
 
-        # Loss is 0 initially
         style_loss = content_loss = 0
 
         # iterate through all the features for the chosen layers
@@ -151,7 +149,6 @@ for step in range(total_steps):
             if WANDB_API_KEY:
                 wandb.log({"Style loss": style_loss, "Content loss": content_loss, "Total loss": total_loss})
                 wandb.log({"generated": [wandb.Image(generated, caption=f"NST image, step {step}")]})
-            # save_image(generated, path)
             save_checkpoint(step, "vgg-19-2", optimizer, generated, path)
 
         total_loss.backward()

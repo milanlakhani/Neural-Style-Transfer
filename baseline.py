@@ -88,19 +88,16 @@ optimizer = optim.Adam([generated],lr = learning_rate)
 
 for step in range(total_steps):
     print(step)
-    # Obtain the convolution features in specifically chosen layers
     generated_features = model(generated)
     content_img_features = model(content_img)
     style_features = model(style_img)
 
-    # Loss is 0 initially
     style_loss = content_loss = 0
 
-    # iterate through all the features for the chosen layers
+    # Iterate through all the features for the chosen layers
     for gen_feature, cont_feature, style_feature in zip(
         generated_features, content_img_features, style_features
     ):
-
         # batch_size will just be 1
         batch_size, channel, height, width = gen_feature.shape
         content_loss += torch.mean((gen_feature - cont_feature) ** 2)
@@ -126,7 +123,6 @@ for step in range(total_steps):
         if WANDB_API_KEY:
             wandb.log({"Style loss": style_loss, "Content loss": content_loss, "Total loss": total_loss})
             wandb.log({"generated": [wandb.Image(generated, caption=f"NST image, step {step}")]})
-        # save_image(generated, path)
         save_checkpoint(step, "vgg-19-1", optimizer, generated, path)
 
 display(Image.open(path))

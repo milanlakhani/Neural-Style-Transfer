@@ -52,7 +52,7 @@ def save_checkpoint(step, model_name, optimizer, generated, path):
     'step': step,
     'optimizer_state': optimizer.state_dict(),
     }
-    torch.save(ckpt, f"checkpoints/{model_name}_ckpt_step_{str(step)}.pth")
+    torch.save(ckpt, f"{model_name}_ckpt_step_{str(step)}.pth")
     save_image(generated, path)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

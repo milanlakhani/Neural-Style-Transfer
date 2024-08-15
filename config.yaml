@@ -1,5 +1,5 @@
-total_steps: 30
-img_savepoint: 10
+total_steps: 16
+img_savepoint: 4
 learning_rate: 0.001
 content_weight: 1
 style_weight: 0.1

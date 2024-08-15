@@ -13,6 +13,7 @@ To install the requirements for this project, after cloning navigate to the root
 You can download a checkpoint file, `vgg-19-c2_ckpt_step_finished.pth`, from this link, https://drive.google.com/file/d/1L1eR9Lg0elt4udTtVZqzxTS6SOPWoNjD/view?usp=drive_link
 You should add the checkpoint to the root directory.
 
+
 ## Training
 
 You can set parameter values, including which images are used, for all models in `config.yaml`.
@@ -34,6 +35,7 @@ These include:
 If you want to record results of a model, near the top of the model file (`baseline.py` `complex1.py` or `complex2.py`), update the value of `WANDB_API_KEY` from `None` to your API key. During training you will see results in project `NST1`.
 
 See wandb reports here: ##########TODO Wandb reports!!!!!!!!!!
+
 
 ## Inference
 

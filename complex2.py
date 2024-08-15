@@ -43,7 +43,7 @@ if WANDB_API_KEY:
             "imsize": imsize,
             "style_images": style_images,
             "content_image": content_image,
-            "optimizer": "ADAM",
+            "optimizer": "LBFGS",
             "style_loss_type": style_loss_type
 		},
 	)
@@ -142,7 +142,7 @@ for step in range(total_steps):
 
         total_loss = content_weight * content_loss + style_weight * style_loss
 
-        if step % img_savepoint == 0:
+        if step + 1 % img_savepoint == 0:
             print(f"Style loss: {style_loss}")
             print(f"Content loss: {content_loss}")
             print(f"Total weighted loss:{total_loss}")

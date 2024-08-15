@@ -145,7 +145,7 @@ for step in range(total_steps):
 
         total_loss = content_weight * content_loss + style_weight * style_loss
 
-        if step + 1 % img_savepoint == 0:
+        if (step + 1) % img_savepoint == 0:
             print(f"Style loss: {style_loss}")
             print(f"Content loss: {content_loss}")
             print(f"Total weighted loss:{total_loss}")
@@ -159,7 +159,7 @@ for step in range(total_steps):
 
     optimizer.step(closure)
 
-save_checkpoint("finished", "vgg-19-2", optimizer, generated, path)
+save_checkpoint("finished", "vgg-19-c2", optimizer, generated, path)
 
 display(Image.open(path))
 

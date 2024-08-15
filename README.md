@@ -10,9 +10,8 @@ Since the model itself does not need training for Neural Style Transfer, no data
 The Python version used to make this was Python 3.12.3
 To install the requirements for this project, after cloning navigate to the root directory on the command line, and run `pip install -r requirements.txt`.
 
-You can download the checkpoints from/by ######TODO Checkpoints link!!!!!!!
-Add the checkpoint to the root directory.
-
+You can download the checkpoints file, `checkpoints/vgg-19-c2_ckpt_step_finished.pth`, from/by ######TODO Checkpoints link!!!!!!!
+You should add the checkpoint to the root directory.
 
 ## Training
 
@@ -36,10 +35,14 @@ If you want to record results of a model, near the top of the model file (`basel
 
 See wandb reports here: ##########TODO Wandb reports!!!!!!!!!!
 
-
 ## Inference
 
-Open the root folder, which contains the inference file, and add checkpoint x ######TODO decide checkpoint!!!!!! to the folder.
+Open the root folder, which contains the inference file, and add checkpoint `checkpoints/vgg-19-c2_ckpt_step_finished.pth` to the folder if you have not already, as detailed in the Setup section.
 
-Etc
-
+Run the cells of the inference notebook in order. If using Google Colab, you will need to first save the directory in your drive, then at the top of this notebook add
+```
+from google.colab import drive
+drive.mount('/content/drive')
+%cd /content/drive/MyDrive/Neural-Style-Transfer
+```
+assuming the last line is the correct location of the directory. In the folder `pictures` I have provided images which can be used to test the model, these can be set in config.yaml as detailed above.

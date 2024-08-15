@@ -74,6 +74,7 @@ def load_checkpoint(file_name, optimizer, generated_path=None, device=None):
     ckpt = torch.load(file_name, map_location=device)
     optimizer.load_state_dict(ckpt['optimizer_state'])
     print("Optimizer's state loaded!")
+    generated = None
     if generated_path:
         generated = load_image(generated_path)
     print("Generated image loaded!")

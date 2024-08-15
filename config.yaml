@@ -1,0 +1,14 @@
+total_steps: 30
+img_savepoint: 10
+learning_rate: 0.001
+content_weight: 1
+style_weight: 0.1
+path: "generated.png"
+imsize: 356
+style_images: # Keep this in list format, even if one image
+  - "painting.jpg"
+  - "femme-pleure.jpg"
+content_image: "lab.jpg"
+
+# Complex model 2 only
+style_loss_type: "GRAM"

@@ -1,3 +1,4 @@
+!pip install wandb
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -11,7 +12,7 @@ import yaml
 
 import vgg
 
-WANDB_API_KEY = None
+WANDB_API_KEY = "b186ee755221be26fc029882e476e6caf180357d"
 
 if WANDB_API_KEY:
     wandb.login(key=WANDB_API_KEY)
@@ -27,16 +28,21 @@ content_weight = settings["content_weight"]
 style_weight = settings["style_weight"]
 path = settings["path"]
 imsize = settings["imsize"]
+style_images = settings["style_images"]
+content_image = settings["content_image"]
 
 if WANDB_API_KEY:
-	run = wandb.init(
-		project = "NST1",
-		config = {
-			"total_steps": total_steps,
-			"learning_rate": learning_rate,
-			"content_weight": content_weight,
-			"style_weight": style_weight,
-			"imsize": imsize
+    run = wandb.init(
+        project = "NST1",
+        config = {
+            "total_steps": total_steps,
+            "learning_rate": learning_rate,
+            "content_weight": content_weight,
+            "style_weight": style_weight,
+            "imsize": imsize,
+            "style_images": style_images,
+            "content_image": content_image,
+            "optimizer": "ADAM"
 		},
 	)
 
@@ -73,9 +79,8 @@ def load_checkpoint(file_name, optimizer, generated_path=None, device=None):
     print("Generated image loaded!")
     return generated
 
-
-content_img = load_image('lab.jpg')
-style_imgs = [load_image('painting.jpg'), load_image('femme-pleure.jpg')]
+content_img = load_image(content_image)
+style_imgs = [load_image(img) for img in style_images]
 
 generated = content_img.clone().requires_grad_(True)
 model = vgg.VGG().to(device).eval()
@@ -148,4 +153,3 @@ for step in range(total_steps):
         save_checkpoint(step, "vgg-19-2", optimizer, generated, path)
 
 display(Image.open(path))
-

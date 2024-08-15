@@ -27,6 +27,8 @@ content_weight = settings["content_weight"]
 style_weight = settings["style_weight"]
 path = settings["path"]
 imsize = settings["imsize"]
+style_image = settings["style_images"][0]
+content_image = settings["content_image"]
 
 if WANDB_API_KEY:
     run = wandb.init(
@@ -36,7 +38,10 @@ if WANDB_API_KEY:
             "learning_rate": learning_rate,
             "content_weight": content_weight,
             "style_weight": style_weight,
-            "imsize": imsize
+            "imsize": imsize,
+            "style_image": style_image,
+            "content_image": content_image,
+            "optimizer": "ADAM"
         },
     )
 
@@ -73,8 +78,8 @@ def load_checkpoint(file_name, optimizer, generated_path=None, device=None):
     print("Generated image loaded!")
     return generated
 
-content_img = load_image('lab.jpg')
-style_img = load_image('dali.jpg')
+content_img = load_image(content_image)
+style_img = load_image(style_image)
 
 generated = content_img.clone().requires_grad_(True)
 model = vgg.VGG().to(device).eval()

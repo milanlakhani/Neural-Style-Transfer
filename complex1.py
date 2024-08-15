@@ -79,14 +79,13 @@ def load_checkpoint(file_name, optimizer, generated_path=None, device=None):
     print("Generated image loaded!")
     return generated
 
-content_img = load_image(content_image)
-style_imgs = [load_image(img) for img in style_images]
+content_img = load_image(f"pictures/{content_image}")
+style_imgs = [load_image(f"pictures/{img}") for img in style_images]
 
 generated = content_img.clone().requires_grad_(True)
 model = vgg.VGG().to(device).eval()
 
 optimizer = optim.Adam([generated],lr = learning_rate)
-# optimizer = optim.LBFGS([content_img])
 
 def covariance_matrix(features):
     batch_size, channel, height, width = features.size()

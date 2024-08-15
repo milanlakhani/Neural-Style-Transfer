@@ -78,8 +78,8 @@ def load_checkpoint(file_name, optimizer, generated_path=None, device=None):
     print("Generated image loaded!")
     return generated
 
-content_img = load_image(content_image)
-style_img = load_image(style_image)
+content_img = load_image(f"pictures/{content_image}")
+style_img = load_image(f"pictures/{style_image}")
 
 generated = content_img.clone().requires_grad_(True)
 model = vgg.VGG().to(device).eval()

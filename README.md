@@ -10,7 +10,7 @@ Since the model itself does not need training for Neural Style Transfer, no data
 The Python version used to make this was Python 3.12.3
 To install the requirements for this project, after cloning navigate to the root directory on the command line, and run `pip install -r requirements.txt`.
 
-You can download the checkpoints file, `checkpoints/vgg-19-c2_ckpt_step_finished.pth`, from/by ######TODO Checkpoints link!!!!!!!
+You can download a checkpoint file, `vgg-19-c2_ckpt_step_finished.pth`, from this link https://drive.google.com/file/d/1L1eR9Lg0elt4udTtVZqzxTS6SOPWoNjD/view?usp=drive_link
 You should add the checkpoint to the root directory.
 
 ## Training
@@ -37,7 +37,7 @@ See wandb reports here: ##########TODO Wandb reports!!!!!!!!!!
 
 ## Inference
 
-Open the root folder, which contains the inference file, and add checkpoint `checkpoints/vgg-19-c2_ckpt_step_finished.pth` to the folder if you have not already, as detailed in the Setup section.
+Open the root folder, which contains the inference file, and add checkpoint `vgg-19-c2_ckpt_step_finished.pth` to the folder if you have not already, as detailed in the Setup section.
 
 Run the cells of the inference notebook in order. If using Google Colab, you will need to first save the directory in your drive, then at the top of this notebook add
 ```

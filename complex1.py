@@ -7,47 +7,53 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 from torchvision.utils import save_image
 import wandb
+import yaml
 
-wandb.login()
+import vgg
+
+WANDB_API_KEY = None
+
+if WANDB_API_KEY:
+    wandb.login(key=WANDB_API_KEY)
+
+with open("config.yaml", 'r') as file:
+    settings = yaml.safe_load(file)
 
 # Hyerparameters
-total_steps = 500
-img_savepoint = 100
-learning_rate = 0.001
-content_weight = 1
-style_weight = 0.1
-path = "generated.png"
-imsize = 356
+total_steps = settings["total_steps"]
+img_savepoint = settings["img_savepoint"]
+learning_rate = settings["learning_rate"]
+content_weight = settings["content_weight"]
+style_weight = settings["style_weight"]
+path = settings["path"]
+imsize = settings["imsize"]
 
-run = wandb.init(
-	project = "NST1",
-	config = {
-		"total_steps": 500,
-		"learning_rate": 0.001,
-		"content_weight": 1,
-		"style_weight": 0.01,
-        "imsize": 356
-	},
-)
+if WANDB_API_KEY:
+	run = wandb.init(
+		project = "NST1",
+		config = {
+			"total_steps": total_steps,
+			"learning_rate": learning_rate,
+			"content_weight": content_weight,
+			"style_weight": style_weight,
+			"imsize": imsize
+		},
+	)
 
-def save_checkpoint(step, model_name, optimizer):
-    ckpt = {'step': step, 'optimizer_state': optimizer.state_dict()}
+def save_checkpoint(step, model_name, optimizer, generated, path):
+    ckpt = {
+    'step': step,
+    'optimizer_state': optimizer.state_dict(),
+    }
     torch.save(ckpt, f"checkpoints/{model_name}_ckpt_step_{str(step)}.pth")
+    save_image(generated, path)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-def load_checkpoint(file_name, optimizer, device=None):
-    if not device:
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    ckpt = torch.load(file_name, map_location=device)
-    optimizer.load_state_dict(ckpt['optimizer_state'])
-    print("Optimizer's state loaded!")
 
 loader = transforms.Compose(
     [
         transforms.Resize((imsize, imsize)),
         transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ]
 )
 
@@ -56,27 +62,23 @@ def load_image(image_name):
     image = loader(image).unsqueeze(0)
     return image.to(device)
 
-class VGG(nn.Module):
-    def __init__(self):
-        super(VGG, self).__init__()
-        self.chosen_features = ["0", "5", "10", "19", "28"]
-        self.model = models.vgg19(weights=models.VGG19_Weights.DEFAULT).features[:29]
+def load_checkpoint(file_name, optimizer, generated_path=None, device=None):
+    if not device:
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    ckpt = torch.load(file_name, map_location=device)
+    optimizer.load_state_dict(ckpt['optimizer_state'])
+    print("Optimizer's state loaded!")
+    if generated_path:
+        generated = load_image(generated_path)
+    print("Generated image loaded!")
+    return generated
 
-    def forward(self, x):
-        features = []
-
-        for layer_num, layer in enumerate(self.model):
-            x = layer(x)
-            if str(layer_num) in self.chosen_features:
-                features.append(x)
-
-        return features
 
 content_img = load_image('lab.jpg')
 style_imgs = [load_image('painting.jpg'), load_image('femme-pleure.jpg')]
 
 generated = content_img.clone().requires_grad_(True)
-model = VGG().to(device).eval()
+model = vgg.VGG().to(device).eval()
 
 optimizer = optim.Adam([generated],lr = learning_rate)
 # optimizer = optim.LBFGS([content_img])
@@ -139,13 +141,11 @@ for step in range(total_steps):
         print(f"Style loss: {style_loss}")
         print(f"Content loss: {content_loss}")
         print(f"Total weighted loss:{total_loss}")
-        wandb.log({"Style loss": style_loss, "Content loss": content_loss, "Total loss": total_loss})
-        wandb.log({"generated": [wandb.Image(generated, caption=f"NST image, step {step}")]})
-        save_image(generated, path)
-        save_checkpoint(step, "vgg-19-2", optimizer)
+        if WANDB_API_KEY:
+            wandb.log({"Style loss": style_loss, "Content loss": content_loss, "Total loss": total_loss})
+            wandb.log({"generated": [wandb.Image(generated, caption=f"NST image, step {step}")]})
+        # save_image(generated, path)
+        save_checkpoint(step, "vgg-19-2", optimizer, generated, path)
 
 display(Image.open(path))
-
-
-
 

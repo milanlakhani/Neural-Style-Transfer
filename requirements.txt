@@ -1,5 +1,6 @@
 IPython
 Pillow
+pyyaml
 torch
 torchvision
 wandb

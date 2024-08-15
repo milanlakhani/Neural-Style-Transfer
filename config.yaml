@@ -6,8 +6,8 @@ style_weight: 0.1
 path: "generated.png"
 imsize: 356
 style_images: # Keep this in list format, even if one image
-  - "painting.jpg"
-  - "femme-pleure.jpg"
+  - "dali.jpg"
+  - "burning_forest.jpg"
 content_image: "lab.jpg"
 
 # Complex model 2 only

@@ -101,6 +101,11 @@ def vincent_loss(generated_feature, style_feature):
     style_cov = covariance_matrix(style_feature)
     return torch.mean((gen_cov - style_cov) ** 2)
 
+if style_loss_type.lower() == "gram":
+    print("Using GRAM for style loss")
+else:
+    print("Using Vincent's for style loss")
+
 for step in range(total_steps):
     print(step)
     def closure():
@@ -120,9 +125,8 @@ for step in range(total_steps):
             batch_size, channel, height, width = gen_feature.shape
             content_loss += torch.mean((gen_feature - cont_feature) ** 2)
 
-            if style_loss_type.lower == "gram":
+            if style_loss_type.lower() == "gram":
                 # Compute Gram Matrix of generated
-                print("Using GRAM for style loss")
                 G = gen_feature.view(channel, height * width).mm(
                     gen_feature.view(channel, height * width).t()
                 )
@@ -134,7 +138,6 @@ for step in range(total_steps):
                     style_loss += torch.mean((G - A) ** 2)
             else:
                 # Compute Vincent's Loss
-                print("Using Vincent's for style loss")
                 for style_feature in style_features:
                     style_loss += vincent_loss(gen_feature, style_feature)
 

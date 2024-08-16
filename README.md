@@ -34,12 +34,12 @@ These include:
 
 If you want to record results of a model, near the top of the model file (`baseline.py` `complex1.py` or `complex2.py`), update the value of `WANDB_API_KEY` from `None` to your API key. During training you will see results in project `NST1`.
 
-See wandb reports here: ##########TODO Wandb reports!!!!!!!!!!
+I have generated some Wandb reports of runs with different hyperparameters, which you can find here https://api.wandb.ai/links/milanlkhn-city-university-of-london/c64i8g8c
 
 
 ## Inference
 
-Open the root folder, which contains the inference file, and add checkpoint `vgg-19-c2_ckpt_step_finished.pth` to the folder if you have not already, as detailed in the Setup section.
+Open the root folder, which contains the inference file `inference.ipynb` as well as some other files, and add checkpoint `vgg-19-c2_ckpt_step_finished.pth` to the folder if you have not already, as detailed in the Setup section.
 
 Run all the cells of the inference notebook in order. If using Google Colab, you will need to first save the directory in your drive, then at the top of this notebook add
 ```
